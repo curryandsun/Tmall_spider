@@ -28,6 +28,7 @@ def set_up(times, url_ori, a, b,cookie):
     spider(times, url_comment_list, headers)
 
 def spider(times, url_2,headers):
+    Evaluate =[]
     for y in range(len(url_2)):
         response = requests.get(url_2[y], headers=headers, timeout=30).content.decode()
         # 初次评价
@@ -49,8 +50,7 @@ def spider(times, url_2,headers):
 
 
 if __name__ == '__main__':
-    page = 10
-    Evaluate =[]
+    page = 50
 
     url_ori_list = cfg.url_ori_list
     url_comment_list = cfg.url_comment_list
